@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicholas Enrique Selvaraj — Engineering Product Development</title>
+<meta name="description" content="Portfolio of Nicholas Enrique Selvaraj, an engineering product development student at SUTD working on healthcare devices, accessibility and safety systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,600;110,700;112,800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--
+════════════════════════════════════════════════════════════════════════
+  EDIT EVERYTHING FROM HERE
+  ────────────────────────────────────────────────────────────────────
+  Two blocks below: THEME (colours and fonts) and PORTFOLIO (your words).
+  You never need to scroll past them. Everything after is machinery.
+
+  THE THREE RULES OF EDITING THIS FILE
+   1. Text lives inside "double quotes". Change what's between them.
+   2. Every line ends with a comma. Keep the comma.
+   3. A block wrapped in { } is one project. Copy, paste, edit to add one.
+
+  If the page ever goes blank, you deleted a quote, comma or brace.
+  Press Ctrl+Z until it comes back.
+════════════════════════════════════════════════════════════════════════
+-->
+<script>
+
+/* ── THEME ───────────────────────────────────────────────────────────
+   Swap any hex code to recolour the whole site. Paste a new hex into
+   the quotes (a hex code is a # followed by six characters).          */
+const THEME = {
+  case:      "#0F1620",   // deep background, the inside of a display case
+  caseSoft:  "#161F2B",   // slightly lifted panels
+  plate:     "#E9E7E1",   // spec card stock
+  plateEdge: "#C8C4BA",   // card edge
+  ink:       "#141A20",   // text on the cards
+  inkSoft:   "#5C6670",   // secondary text on cards
+  chrome:    "#D3D8DE",   // main text on the dark background
+  chromeSoft:"#8794A2",   // secondary text on the dark background
+  brass:     "#C79A56",   // the one accent. Diecast metal, not gold.
+  hairline:  "rgba(199,154,86,.30)"
+};
+
+/* ── SETTINGS ────────────────────────────────────────────────────────
+   tilt        cases lean toward your cursor. Set to false for a still page.
+   flipHint    shows the "Turn over" button on each case.                */
+const SETTINGS = {
+
+  // "carded"  each project sits in a collector blister pack on a lit shelf.
+  //           More personality. Best for design-led studios and startups.
+  // "plate"   plain cases, no packaging. Sober and fast to read.
+  //           Best for hospitals, defence, and large engineering firms.
+  style: "carded",
+
+  tilt: true,      // cases lean toward your cursor
+  flipHint: true,  // shows the Turn over button
+
+  // Printed across the top of every blister card. Yours to name.
+  seriesName: "Enrique Collection",
+  seriesLine: "Series 01 — Healthcare, Accessibility & Safety"
+};
+
+/* ── PORTFOLIO ─────────────────────────────────────────────────────── */
+const PORTFOLIO = {
+
+  name: "Nicholas Enrique Selvaraj",
+
+  // Sits under your name. One sentence. Make it sound like you, not like a brochure.
+  statement: "I design the things between people and the things that could hurt them.",
+
+  // The small line at the very top of the page, beside your initials.
+  role: "Engineering Product Development, SUTD Class of 2028",
+
+  location:  "Singapore",
+  email:     ["nicholasenrique_selvaraj@mymail.sutd.edu.sg"],
+  phone:     "+65 9037 0150",
+  linkedin:  "https://linkedin.com/in/nicholas-enrique-selvaraj",
+  resumeFile:"Nicholas_Selvaraj_Resume.pdf",  // put the PDF beside this file
+
+  portrait: "images/me.jpg",   // e.g. "images/portrait.jpg"
+
+  // Each line here becomes a paragraph.
+  about: [
+    "I'm in my third year of Engineering Product Development at the Singapore University of Technology and Design, with a minor in Design, Technology & Society.",
+    "Before SUTD I read Aeronautical Engineering at Singapore Polytechnic, then spent two years as a medic in the Republic of Singapore Air Force. Running a medical centre and covering flight-line operations is where I learned what a device failing in the field actually costs, and it's why most of my work now sits in healthcare, accessibility and safety.",
+    "I work mainly in Fusion 360, FEA and 3D printing. I like problems where the answer has to survive being handled by someone tired, rushed, or not reading the manual."
+  ],
+
+  education: [
+    {
+      school: "Singapore University of Technology and Design",
+      award:  "B.Eng. Engineering Product Development",
+      detail: "Minor in Design, Technology & Society. GPA 4.43/5.00",
+      dates:  "2024 — present",
+      notes: [
+        "Best Biology × Design Thinking Project, Term 3",
+        "Best Design Thinking & Innovation Project, and the Sustainability Practice Prize, Term 2",
+        "Top 10 finalist, Design Thinking Project, Term 1"
+      ]
+    },
+    {
+      school: "Singapore Polytechnic",
+      award:  "Diploma in Aeronautical Engineering",
+      detail: "Diploma Plus in Aviation Management. GPA 3.667/4.00",
+      dates:  "2018 — 2021",
+      notes:  ["Lee Foundation Bursary Award, 2019"]
+    }
+  ],
+
+  experience: [
+    {
+      role:  "Part-time associate",
+      org:   "Ministry of Football",
+      dates: "Aug 2025 — present",
+      note:  "Running multi-school sports sessions and competitions on short lead times, coordinating with MOE educators and managing equipment across concurrent sites."
+    },
+    {
+      role:  "Medic, full-time national service",
+      org:   "Republic of Singapore Air Force",
+      dates: "Oct 2022 — Sep 2024",
+      note:  "Ran medical centre operations — medication distribution, inventory control, compliance. Frontline medical cover at RSAF Open House 2023 for over 5,000 visitors."
+    },
+    {
+      role:  "Healthcare support assistant",
+      org:   "Fullerton Health Group",
+      dates: "Jul 2021 — Oct 2021",
+      note:  "Vaccination workflow — ushering, registration and post-vaccination monitoring under changing MOH protocols."
+    }
+  ],
+
+  skills: [
+    { group: "CAD and simulation", items: ["Fusion 360", "AutoCAD", "FEA — thermal and structural", "Design for additive manufacture"] },
+    { group: "Analysis",           items: ["MATLAB", "Simulink", "Design of experiments", "Sensor data interpretation"] },
+    { group: "Making",             items: ["FDM 3D printing", "Prototype fabrication", "Bench testing", "Mechanism design"] },
+    { group: "Electronics",        items: ["ESP32"] },
+    { group: "Method",             items: ["Design thinking", "User research", "Iterative prototyping", "Cross-functional teamwork"] }
+  ],
+
+  /* ── PROJECTS ──────────────────────────────────────────────────────
+     Order here is the order on the page. Strongest first.
+
+     PHOTOS  Make a folder called  images  beside this file, then write
+             the path:   cover: "images/guard-hero.jpg"
+             Leave it as ""  and you get a marked empty slot instead, so
+             an unfinished entry still looks deliberate.
+
+     FIELDS  Only id, title and summary are required. Delete any other
+             line you don't want and that part simply won't appear.     */
+  projects: [
+
+    {
+      id: "guard-damp-it",
+      title: "Guard-Damp-It!",
+      tagline: "Intelligent safety-assisted weedwhacker",
+      year: "2026",
+      field: "Engineering Design Innovation (30.007), in partnership with Ho Eng Huat Construction",
+      cover: "images/guard.jpg",
+      summary: "A retractable guard and projectile-damping curtain that lets landscapers cut close to kerbs and tree roots without giving up their protection, plus multimodal sensing that tells the tool what kind of cutting is happening.",
+      award: "",
+      specs: [
+        { label: "Brief",  value: "Turn a conventional weedwhacker into an intelligent safety-assisted tool that reduces operator error and projectile hazards" },
+        { label: "Role",   value: "Mechanical Engineer, CAD, Fabrication, Testing" },
+        { label: "Team",   value: "7" },
+        { label: "Built with", value: "Fusion 360, FDM printing, ESP32, AS5600 magnetic encoder, MPU6050 IMU, Bowden cable actuation" }
+      ],
+      sections: [
+        {
+          heading: "EXISTING CONSTRAINTS",
+          body: "Conventional string trimmers manage flying rocks and debris with a fixed guard and the operator's judgement, and nothing else. But landscaping means cutting close to kerbs, tree roots, walls and poles — exactly where a fixed guard gets in the way. So operators work around it: they tilt the tool, reposition it, cut at angles the guard was never designed for. The guard is meant to reduce projectile risk ends up encouraging the behaviour that creates it."
+        },
+        {
+          heading: "PROBLEM STATEMENT",
+          body: "How might we transform the conventional weedwhacker into an intelligent safety-assisted tool that reduces operator error and projectile hazards?"
+        },
+        {
+          heading: "TWO SYSTEMS, ONE PRINCIPLE",
+          body: "The design adds an active safety layer without taking manual control away. A thumb-operated bicycle lever on the handle pulls a Bowden cable, rotating the guard back for close cutting; release it and the guard returns to its protective position. Around the guard perimeter sits a flexible PVC curtain. It isn't trying to stop a projectile outright — it intercepts debris, absorbs some impact energy and drops the exit velocity. That's a more honest goal than a rigid barrier which has to be removed to be useful."
+        },
+        {
+          heading: "WHY SENSING, WHAT FOR?",
+          body: "An ESP32 collects an MPU6050 IMU for sweep motion and tool orientation, an AS5600 magnetic encoder for whether the guard is deployed or retracted, a vibration sensor for impact events, and a current sensor for motor load. No single one of these tells you much. Fused, they start to separate normal cutting from hard ground contact, rock strikes and unusual handling. The point is feedback to the operator, not autonomy — the tool should say something is going wrong, not decide what to do about it."
+        },
+        {
+          heading: "TESTING (R&D)",
+          body: "For clogging we ran the PVC curtain guard against a standard Bosch guard across dry grass, wet grass and different cutting durations, measuring retained grass by mass balance. Accumulation rises with duration and wet grass holds substantially more; whether our geometry beats the Bosch baseline is what we're still resolving. Projectile testing is looking at velocity and energy after impact with the curtain versus a conventional guard."
+        }
+      ],
+      gallery: [
+        { src: "images/sitevisitedi.jpeg", caption: "Site Visit to Pasir Ris Park" },
+        { src: "images/clogtest.jpeg", caption: "Guard mechanism, retracted and deployed" },
+        { src: "images/guard.jpg", caption: "Our Guard" },
+        { src: "images/guardposter.jpeg", caption: "Guard Damp It Poster" },
+        { src: "images/guardexhibition.jpeg", caption: "Exhibition" },
+        { src: "images/t5team.jpeg", caption: "The Team" },
+        { src: "images/guardrenditions.jpeg", caption: "Guard Research & Design" }
+      ]
+    },
+
+    {
+      id: "rackit",
+      title: "Screw it, Just RackIt",
+      tagline: "RFID smart toolrack",
+      year: "2025",
+      field: "DESIGN THINKING AND INNOVATION",
+      cover: "images/rackit.jpg",
+      summary: "A tool rack that knows what's missing. RFID tracking with an on-screen assistant handling identification, live inventory and step-by-step guidance for students who have never held the tool before.",
+      award: ["Best Design Thinking & Innovation Project", "Most technically Robust design (SC01)", "Greenprint Sustainability Practice Prize winner", "Best visual and story telling execution", "Nominated for the Baby Shark Award(An entrepreneurship grant to bring Screw it Just RackIt to market)"],
+      specs: [
+        { label: "ROLE",  value: "Mechanical team, Fabricated and Designed housing,Created Real-Time Telegrambot" },
+        { label: "TEAM SIZE",  value: "5" },
+        { label: "BUILT WITH", value: "RFID readers, ESP32, Fusion 360, Telegram, VScode" },
+        { label: "MATERIALS",  value: "Plywood, PLA filament, Acrylic" }
+      ],
+      sections: [
+        { heading: "WHAT'S WRONG?", body: "What was going wrong in the workshop before RackIt? Tools were often unavailable due to improper returns, while missing tools remain difficult to trace despite daily checks. Students also struggle to identify and use tools safely outside training sessions, with no way to check tool availability before arriving at the lab." },
+        { heading: "PROBLEM STATEMENT", body: "How might we create a solution for our FAB LAB staff to help enable students in gaining greater independence to safely explore the uses of the FabLab such that they can better transform their creative ideas into products?" },
+        { heading: "METHODOLOGY", body: "RFID tracking identifies each tool as it leaves and returns, keeping inventory live rather than reconstructed at the end of a session. The on-screen assistant handles the second half of the problem: a student who doesn't recognise a tool gets step-by-step guidance on using it safely." }
+    
+      ],
+      gallery: [
+        { src: "images/ai-ideagen.jpeg", caption: "Ideation" },
+        { src: "images/cadrack.jpeg", caption: "CAD Rendition" },
+        { src: "images/rackit.jpeg", caption: "Rackit in Fablab" },
+        { src: "images/telebot.jpg", caption: "Telebot Tool Tracker" },
+        { src: "images/fablab.jpg", caption: "Site Model of SUTD Fablab" },
+        { src: "images/dtipresent.jpg", caption: "Exhibition Presentation" },
+        { src: "images/dticert.jpeg", caption: "Award" },
+        { src: "images/dtiteam.jpg", caption: "The Team" },
+        { src: "images/t2team.jpeg", caption: "Award Recipients"}
+      ]
+    },
+
+    {
+      id: "can-remember-or-not",
+      title: "Can Remember or Not?",
+      tagline: "Memory engagement kit for people with Alzheimer's",
+      year: "2025",
+      field: "Healthcare, Design Thinking Project 3 [BIOLOGY]",
+      cover: "images/remember.jpg",
+      summary: "SG Tailored Memory Game Kit complete with a pop-up scrapbook built around Singapore kopitiam imagery. A game kit made entirely from recycled materials, designed to prompt active recall through touch rather than screens.",
+      award: "Best Biology × Design Thinking Project, and selected for the DTP III Exhibition",
+      specs: [
+        { label: "ROLE",  value: "Team leader, creative designer" },
+        { label: "TEAM SIZE",  value: "5" },
+        { label: "BUILT WITH", value: "FDM 3D printing, Arts & craft" },
+        { label: "MATERIALS",  value: "Cardboard, Felt, Coffee beans, Recyclables, PLA Filament" }
+      ],
+      sections: [
+        { heading: "WHY THE KOPITIAM?", body: "We called elderly care centres across Singapore. We sat with a caretaker and asked her what a hard day actually looked like. What we heard wasn't just clinical, it was deeply human. These patients weren't unreachable. They just needed the right door. For many of them, that door was memory. We chose sensory memories of a 1950s Singapore morning." },
+        { heading: "PROBLEM STATEMENT", body: "How might we design cognitive stimulating experiences in an environment that evokes cherished memories and fosters community to enhance their self-identity?​" },
+        { heading: "DESIGN IDEOLOGY", body: "We built two things that work together.The first was a tactile scrapbook, a map of memories. Each page a different Singaporean breakfast, recreated with real sensory detail.The second was a hands-on playkit from recycled materials.The goal wasn't to test their memory, it was to spark conversation. To give them something to hold, make, and share with the person beside them. Warmth over clinical. Dignity over pity." },
+        { heading: "FABRICATION", body: "Behind the scenes, every page of the scrapbook, every sensory element, every piece of the playkit was designed and built by hand from scratch. Made entirely out of recyclables." }
+      ],
+      gallery: [
+        { src: "images/scrapbook.jpeg", caption: "The pop-up scrapbook open" },
+        { src: "images/stamps.jpeg", caption: "Traditional Hobbies section" },
+        { src: "images/onde.jpg", caption: "Make your own Kueh Game, Onde onde" },
+        { src: "images/lapis.jpg", caption: "Make your own Kueh Game, Kueh Lapis" },
+        { src: "images/yoke.jpeg", caption: "Breakfast set, Soft-boiled eggs" },
+        { src: "images/dtp-bio.jpeg", caption: "DTP III Exhibition" }
+      ]
+    },
+
+    {
+      id: "makanmap",
+      title: "MakanMap",
+      tagline: "Hawker centre kiosk for visually impaired diners",
+      year: "2026",
+      field: "3D Design project- Engineering for Good",
+      cover: "images/makanmap.jpg",
+      summary: "An ordering kiosk with 3D-printed food-shaped tactile buttons and audio menu feedback, plus a mechanical-pin tactile map that reconfigures to guide the user to the stall they picked.",
+      
+      specs: [
+        { label: "ROLE",  value: "Mechanical designer, Fabricated and Designed housing, Ideator" },
+        { label: "TEAM SIZE",  value: "5" },
+        { label: "BUILT WITH", value: "FDM 3D printing, ESP32, Raspberry Pi 4" },
+        { label: "MATERIALS",  value: "Plywood, PLA Filament" }
+      ],
+      sections: [
+        { heading: "WHY?", body: "At Enabling Village Singapore, we met Mr. Chong Kwek Bin, a man who has spent years teaching people with disabilities to use technology and reshaping how Singapore approaches visual impairment. He helped us understand that the problem wasn't just navigation. It was confidence. The quiet loss of a daily ritual that connects people to culture, community, and choice." },
+        { heading: "PROBLEM STATEMENT", body: "How might we Inform visually impaired individuals of the available food items in a food centre, allowing them to explore options and choose independently?​" },
+        { heading: "ORDERING IS ONLY 1/2 THE PROBLEM", body: "An accessible menu gets someone to a decision. It doesn't get them to the stall. The mechanical-pin tactile map answers the second half, the surface physically reconfigures to show the route from kiosk to chosen stall." },
+        { heading: "WHAT DOES IT SOLVE?", body: "MakanMap doesn't just help the visually impaired find food. It gives them back the confidence to walk into a hawker centre and choose. Because accessibility should not be a privilege. It should be the standard." }
+      ],
+      gallery: [
+        { src: "images/makanmap1.jpg", caption: "Paper Prototype" },
+        { src: "images/tactile.jpg", caption: "Mechanical-pin tactile map" },
+        { src: "images/kiosk.jpg", caption: "Kiosk, full view" },
+        { src: "images/makanposter.jpg", caption: "MakanMap Poster" },
+        { src: "images/t4showcase.jpg", caption: "Exhibition" },
+        { src: "images/t4team.jpg", caption: "The Team" }
+      ]
+    },
+
+    {
+      id: "careweave",
+      title: "CareWeave",
+      tagline: "NICU Milk Bottle Trolley Reimagined",
+      year: "2026",
+      field: "Healthcare, Airlangga × SUTD Exchange Program",
+      cover: "images/weave.jpg",
+      summary: "A neonatal milk-handling trolley developed with a cross-institution team at Universitas Airlangga in Surabaya, built around how NICU nurses actually move between cots.",
+      award: "Second place Overall, Best Product and Innovation",
+      specs: [
+        { label: "PROGRAMME", value: "SUTD Global Exchange Opportunity at Universitas Airlangga, Surabaya" },
+        { label: "ROLE",  value: "Team leader, Creative Designer" },
+        { label: "TEAM",  value: "6" },
+        { label: "BUILT WITH", value: "CAD, Fabrication methods,Arts & Craft" }
+      ],
+      sections: [
+        { heading: "DESIGNING IN SOMEONE ELSE'S HOSPITAL", body: "We first had to gain a ground understanding of workflows.The current workflow: Nurses collect bottles in a communal basket → wash at pantry → dry outside → manually track which bottle belongs to which baby → return to tray outside ward" },
+        { heading: "EXISTING WORKFLOW ISSUES", body: "Cognitive load on nurses was significant. We asked the NICU specialist if we could improve this. She said: 'If you can, we need it.'" },
+        { heading: "PROBLEM STATEMENT", body: "How might we design NICU workflows that reduce cognitive load for nurses while supporting safe, confident patient care?" },
+        { heading: "WHAT WE BUILT", body: "CareWeave features an alternating shelf system that switches between soiled and clean bottles with a simple push, color-coded compartments for easy ward identification, and rotatable layers for increased storage capacity. Its front-facing access with an acrylic cover promotes convenient and hygienic retrieval, while its mobility system allows easy transportation between wards and the pantry.The Result: Manual tracking eliminated, Patient safety improved and Nurses reclaim mental space." }
+      ],
+      gallery: [
+        { src: "images/trolley1.jpg", caption: "Paper Prototype" },
+        { src: "images/existingnicu.jpg", caption: "Site Visit @ Airlangga Hospital,NICU Ward" },
+        { src: "images/storyboardair.jpeg", caption: "CareWeave Storyboard" },
+        { src: "images/weave2.jpeg", caption: "CareWeave Working Principles" },
+        { src: "images/teamsura.jpg", caption: "The Team" },
+        { src: "images/airlanggaaward.jpg", caption: "2nd Overall, Best Product & Innovation" },
+        { src: "images/cert.jpeg", caption: "Certificate of Accomplishment" },
+        { src: "images/featured.jpg", caption: "Featured on Airlangga University Instagram Page" }
+      ]
+    },
+
+    {
+      id: "liquid-metal-antenna",
+      title: "Flexible liquid metal antenna",
+      tagline: "EGaIn in PDMS microchannels",
+      year: "2026",
+      field: "Fluid Mechanics & Electromechanics 2D Project",
+      cover: "images/rf-cover.jpg",
+      summary: "A 2.4 GHz antenna for flexible merchandise-tracking stickers, made by drawing liquid-metal EGaIn into PDMS microchannels via soft lithography, so the antenna bends with whatever it's stuck to.",
+      award: "",
+      specs: [
+        { label: "PROJECT TITLE", value: "Joint Fluid Mechanics and Electromagnetics design review" },
+        { label: "ROLE",  value: "[Fabricator and Testing]" },
+        { label: "MATERIALS", value: "EGaIn liquid metal, PDMS" },
+        { label: "FABRICATION METHODS", value: "Soft lithography microchannel fabrication" }
+      ],
+      sections: [
+        { heading: "WHY LIQUID METAL?", body: "Solid conductors like etched copper crack and fatigue under repeated bending. EGaIn stays liquid at room temperature, so it deforms with the silicone and keeps a continuous conductive path through flexing and vibration. The trade-off is lower conductivity than copper, which the spiral design is meant to tolerate." },
+        { heading: "FLUID MECHANICS PORTION", body: "EGaIn’s high surface tension resists entering small channels, so injection pressure has to overcome it. Clean filling came down to bond integrity between layers (poor bonding caused leaks), how the liquid was introduced (needle piercing tore the wall, so we switched to a direct pressure seal at the port), and mold quality (SLA gave cleaner channels than PLA)." },
+        { heading: "ELECTROMAGNETIC PORTION", body: "We sized the spiral from the full-wave loop radius, R ≈ c/(2πf) ≈ 19.89 mm, then tuned spiral length and ground width through parameter sweeps to centre resonance at 2.4 GHz. The final design reached about -38 dB simulated and -34.88 dB measured. When bent (2° to 30° in simulation), the resonance stays near 2.45 GHz with only a slight shift." }
+      ],
+      gallery: [
+        { src: "images/mold1.jpg", caption: "PDMS microchannel mould" },
+        { src: "images/flexed.jpg", caption: "Filled antenna, flexed" },
+        { src: "images/tyre.jpg", caption: "Demo Application" }, 
+      ]
+    }
+
+  ]
+};
+</script>
+<!-- ════════ END OF EDITABLE CONTENT — machinery below ════════ -->
+
+
+<style>
+:root{
+  --sans:"Source Sans 3",system-ui,-apple-system,sans-serif;
+  --disp:"Archivo","Source Sans 3",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--sans);font-size:17px;line-height:1.62;
+  color:var(--chrome);background:var(--case);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+img{max-width:100%;display:block}
+
+/* ── top bar ── */
+.bar{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--case) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:58px}
+.mark{display:flex;align-items:baseline;gap:12px;min-width:0}
+.mark b{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 112;letter-spacing:.02em;font-size:1rem;color:var(--brass)}
+.mark span{font-size:.86rem;color:var(--chromeSoft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar nav{display:flex;gap:24px;font-size:.9rem}
+.bar nav a{text-decoration:none;color:var(--chromeSoft)}
+.bar nav a:hover{color:var(--brass)}
+
+/* ── hero ── */
+.hero{padding:92px 0 76px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:-40% 30% auto -20%;height:120%;
+  background:radial-gradient(ellipse at 30% 40%,rgba(199,154,86,.10),transparent 62%);
+  pointer-events:none;
+}
+.hero-inner{position:relative}
+.hero h1{
+  font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 112;
+  font-size:clamp(2.6rem,7.6vw,6rem);line-height:.94;letter-spacing:-.022em;
+  margin:0 0 26px;max-width:15ch;color:#F0EFEC;
+}
+.hero h1 .ln{display:block}
+.statement{
+  font-size:clamp(1.1rem,1.9vw,1.4rem);line-height:1.5;max-width:44ch;
+  color:var(--chrome);margin:0 0 34px;
+}
+.rule{height:1px;background:linear-gradient(90deg,var(--brass),transparent);max-width:460px;margin-bottom:22px}
+.meta{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:.94rem;color:var(--chromeSoft)}
+.meta a{text-decoration:none;border-bottom:1px solid var(--hairline);padding-bottom:2px}
+.meta a:hover{color:var(--brass);border-bottom-color:var(--brass)}
+
+/* ── section heads ── */
+.band{padding:64px 0 8px}
+.band > h2{
+  font-family:var(--disp);font-weight:700;font-variation-settings:"wdth" 110;
+  font-size:1.05rem;letter-spacing:.01em;color:var(--brass);
+  margin:0 0 34px;display:flex;align-items:center;gap:18px;
+}
+.band > h2::after{content:"";flex:1;height:1px;background:var(--hairline)}
+
+/* ── collection: each project is a case you can tilt and turn over ── */
+.stage{perspective:1500px;margin-bottom:28px}
+.tilt{
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+  transition:transform .5s cubic-bezier(.22,.7,.3,1);
+  will-change:transform;
+}
+.tilt.live{transition:transform .09s linear}
+.flip{
+  display:grid;transform-style:preserve-3d;
+  transition:transform .62s cubic-bezier(.25,.8,.3,1);
+}
+.flip.turned{transform:rotateY(180deg)}
+.face{
+  grid-area:1/1;position:relative;border-radius:3px;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  transform-style:preserve-3d;
+}
+.plate-mode .face{overflow:hidden}
+
+/* front: photo + description */
+.front{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  border:1px solid rgba(255,255,255,.09);background:var(--caseSoft);
+  box-shadow:0 18px 40px -24px rgba(0,0,0,.85);
+}
+.stage:nth-child(even) .item-photo{order:2}
+.item-photo{background:#0B1119;min-height:310px;position:relative}
+.item-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.item-info{padding:36px 38px 30px;display:flex;flex-direction:column;gap:13px}
+.ref{font-size:.78rem;color:var(--brass);letter-spacing:.04em}
+.item-info h3{
+  font-family:var(--disp);font-weight:700;font-variation-settings:"wdth" 110;
+  font-size:2rem;line-height:1.06;letter-spacing:-.02em;margin:0;color:#F0EFEC;
+}
+.tagline{color:var(--chromeSoft);font-size:1rem;margin:-6px 0 0}
+.summary{font-size:.99rem;color:var(--chrome);margin:0;max-width:48ch}
+.badge{
+  align-self:flex-start;font-size:.84rem;color:var(--brass);
+  border:1px solid var(--hairline);border-radius:2px;padding:5px 11px;line-height:1.4;
+}
+.acts{margin-top:auto;padding-top:8px;display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  background:none;font:inherit;font-size:.93rem;color:var(--brass);
+  border:1px solid var(--brass);border-radius:2px;padding:9px 19px;cursor:pointer;
+  transition:background .16s,color .16s;
+}
+.btn:hover{background:var(--brass);color:var(--case)}
+.btn.ghost{color:var(--chromeSoft);border-color:rgba(255,255,255,.2)}
+.btn.ghost:hover{background:rgba(255,255,255,.08);color:var(--chrome)}
+
+/* the light raking across the surface as it tilts */
+.sheen{
+  position:absolute;inset:0;pointer-events:none;opacity:0;
+  transition:opacity .3s;
+  background:radial-gradient(520px circle at var(--mx,50%) var(--my,50%),
+             rgba(255,255,255,.07),transparent 62%);
+}
+.tilt.live .sheen{opacity:1}
+
+/* back: the baseplate */
+.back{transform:rotateY(180deg);border:1px solid rgba(255,255,255,.1)}
+.base{
+  height:100%;padding:38px 42px;position:relative;
+  background:
+    repeating-linear-gradient(96deg,rgba(255,255,255,.03) 0 2px,transparent 2px 5px),
+    linear-gradient(118deg,#2F363F 0%,#4A5460 22%,#2B323B 47%,#454F5B 73%,#2D343D 100%);
+}
+.base::after{
+  content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.07);
+  border-radius:2px;pointer-events:none;
+}
+.engrave{
+  color:#B3BCC6;
+  text-shadow:0 1px 0 rgba(255,255,255,.16),0 -1px 0 rgba(0,0,0,.62);
+}
+.base h4{
+  font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 112;
+  font-size:1.5rem;letter-spacing:.06em;margin:0 0 4px;text-transform:uppercase;
+}
+.base .sub{font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 24px;opacity:.72}
+.stamp{max-width:760px}
+.stamp div{
+  display:grid;grid-template-columns:150px 1fr;gap:22px;
+  padding:8px 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:.9rem;
+}
+.stamp dt{letter-spacing:.09em;text-transform:uppercase;font-size:.76rem;opacity:.62;margin:0}
+.stamp dd{margin:0}
+.base-foot{
+  margin-top:26px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;opacity:.55;
+}
+.base .acts{margin-top:22px}
+.screw{
+  position:absolute;width:11px;height:11px;border-radius:50%;
+  background:radial-gradient(circle at 35% 32%,#5A626C,#1D2228 72%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22);
+}
+.screw::before{
+  content:"";position:absolute;inset:3px 1.5px;border-top:1px solid rgba(0,0,0,.65);
+  transform:rotate(28deg);
+}
+.screw.tl{top:13px;left:13px}
+.screw.tr{top:13px;right:13px}
+.screw.bl{bottom:13px;left:13px}
+.screw.br{bottom:13px;right:13px}
+
+/* ── carded collectible: blister pack on a lit shelf ── */
+.carded .stage{margin-bottom:74px;position:relative}
+
+/* the shelf the pack stands on */
+.carded .stage::after{
+  content:"";position:absolute;left:7%;right:7%;bottom:-32px;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(199,154,86,.40) 22%,rgba(199,154,86,.40) 78%,transparent);
+  box-shadow:0 0 26px 3px rgba(199,154,86,.10);
+  pointer-events:none;
+}
+
+/* the printed card stock */
+.carded .front{
+  display:block;padding:0;border:none;background:none;box-shadow:none;
+}
+.pack{
+  border-radius:8px 8px 4px 4px;overflow:hidden;
+  background:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.035) 0 1px,transparent 1px 3px),
+    linear-gradient(168deg,#1C2433 0%,#161D27 52%,#1A222D 100%);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 30px 44px -22px rgba(0,0,0,.95);
+}
+.hang{
+  height:26px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),transparent);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.hang i{
+  display:block;width:34px;height:13px;border-radius:0 0 40px 40px;
+  border:1px solid rgba(255,255,255,.16);border-top:none;
+  background:rgba(0,0,0,.4);
+}
+.header-card{
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+  flex-wrap:wrap;padding:13px 26px 12px;
+  background:linear-gradient(100deg,rgba(199,154,86,.17),rgba(199,154,86,.04));
+  border-bottom:1px solid rgba(199,154,86,.3);
+}
+.header-card b{
+  font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 112;
+  font-size:.98rem;letter-spacing:.13em;text-transform:uppercase;color:var(--brass);
+}
+.header-card span{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--chromeSoft)}
+.pack-body{display:grid;grid-template-columns:1.02fr .98fr;gap:0}
+.carded .stage:nth-child(even) .blister{order:2}
+
+/* the clear plastic bubble */
+.blister{
+  position:relative;margin:22px;border-radius:12px;
+  transform:translateZ(30px);
+  background:rgba(255,255,255,.03);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.34),
+    inset 0 -1px 0 rgba(255,255,255,.1),
+    0 14px 26px -12px rgba(0,0,0,.9);
+  border:1px solid rgba(255,255,255,.14);
+  overflow:hidden;min-height:286px;
+}
+.blister .slot,.blister img{border-radius:11px}
+/* specular streak across the plastic */
+.blister::after{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:11px;
+  background:linear-gradient(
+    104deg,transparent 26%,
+    rgba(255,255,255,.26) calc(var(--gloss,50%) - 8%),
+    rgba(255,255,255,.05) calc(var(--gloss,50%) + 3%),
+    transparent 66%);
+  transition:background .16s linear;
+}
+.carded .item-info{padding:26px 30px 28px}
+.carded .item-photo{position:absolute;inset:0;min-height:0}
+
+/* printed on the card below the copy */
+.printed{
+  margin-top:auto;padding-top:14px;border-top:1px dashed rgba(255,255,255,.14);
+  display:flex;flex-wrap:wrap;gap:6px 18px;
+  font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--chromeSoft);
+}
+
+/* cabinet lighting behind the whole collection */
+.carded{position:relative}
+.carded::before{
+  content:"";position:absolute;inset:-30px -40px;pointer-events:none;z-index:-1;
+  background:radial-gradient(90% 40% at 50% 0%,rgba(199,154,86,.07),transparent 70%);
+}
+
+/* empty photo slot */
+.slot{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;padding:26px;text-align:center;
+  color:var(--chromeSoft);
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.022) 0 50%,transparent 50%),
+    #0B1119;
+  border:1px dashed rgba(199,154,86,.26);
+}
+.slot b{font-size:.88rem;font-weight:600;color:var(--brass)}
+.slot span{font-size:.8rem;line-height:1.45;max-width:32ch;opacity:.85}
+
+/* ── about / lists ── */
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:start}
+.prose p{max-width:62ch;margin:0 0 17px}
+.portrait{position:relative;aspect-ratio:4/5;border:1px solid rgba(255,255,255,.11);border-radius:3px;overflow:hidden;background:#0B1119}
+.portrait img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.entry{padding:20px 0;border-top:1px solid rgba(255,255,255,.09)}
+.entry:first-of-type{border-top:none;padding-top:0}
+.entry-head{display:flex;justify-content:space-between;gap:20px;align-items:baseline;flex-wrap:wrap}
+.entry h4{font-family:var(--disp);font-weight:600;font-size:1.14rem;margin:0;color:#F0EFEC}
+.when{font-size:.87rem;color:var(--chromeSoft);white-space:nowrap}
+.entry p{margin:5px 0 0;font-size:.97rem;color:var(--chrome);max-width:62ch}
+.entry .sub{color:var(--chromeSoft);font-size:.94rem}
+.entry ul{margin:11px 0 0;padding-left:19px;font-size:.93rem;color:var(--chromeSoft)}
+.entry li{margin-bottom:5px}
+.skillset{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px}
+.skillset h4{font-family:var(--disp);font-weight:600;font-size:1rem;color:var(--brass);margin:0 0 10px}
+.skillset ul{list-style:none;margin:0;padding:0;font-size:.95rem;color:var(--chrome)}
+.skillset li{padding:3px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+
+/* ── build sheet overlay ── */
+.sheet{position:fixed;inset:0;z-index:70;background:rgba(6,10,16,.88);overflow-y:auto;display:none}
+.sheet.is-open{display:block}
+.sheet-inner{background:var(--plate);color:var(--ink);max-width:860px;margin:0 auto;min-height:100%}
+.sheet-top{
+  position:sticky;top:0;z-index:2;background:var(--plate);
+  border-bottom:1px solid var(--plateEdge);
+  display:flex;justify-content:space-between;align-items:center;gap:18px;padding:15px 36px;
+}
+.sheet-top strong{font-family:var(--disp);font-weight:700;font-size:1rem}
+.close{border:1px solid var(--ink);background:none;color:var(--ink);font:inherit;font-size:.88rem;padding:7px 15px;border-radius:2px;cursor:pointer}
+.close:hover{background:var(--ink);color:var(--plate)}
+.sheet-body{padding:38px 36px 90px}
+.sheet-body h2{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 112;font-size:clamp(2.1rem,5vw,3.2rem);line-height:1.02;letter-spacing:-.028em;margin:0 0 8px}
+.sheet-sub{font-size:1.14rem;color:var(--inkSoft);margin:0 0 20px}
+.sheet-award{display:inline-block;border:1px solid var(--plateEdge);border-left:3px solid var(--brass);padding:7px 14px;font-size:.9rem;margin-bottom:28px}
+.sheet-hero{position:relative;aspect-ratio:16/9;border:1px solid var(--plateEdge);border-radius:2px;overflow:hidden;margin-bottom:32px;background:#DEDBD3}
+.sheet-hero img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.sheet-hero .slot{background:repeating-linear-gradient(135deg,#E1DED6 0 10px,#DAD7CE 10px 20px);border-color:rgba(20,26,32,.18);color:var(--inkSoft)}
+.sheet-hero .slot b{color:#8A6A2E}
+.specs{border-top:2px solid var(--ink);margin:0 0 36px}
+.specs div{display:grid;grid-template-columns:140px 1fr;gap:22px;padding:12px 0;border-bottom:1px solid var(--plateEdge);font-size:.96rem}
+.specs dt{color:var(--inkSoft);margin:0}
+.specs dd{margin:0}
+.sheet-body h3{font-family:var(--disp);font-weight:700;font-size:1.42rem;letter-spacing:-.016em;margin:34px 0 11px}
+.sheet-body p{max-width:66ch;margin:0 0 15px;line-height:1.66}
+.todo{background:rgba(199,154,86,.16);border-left:3px solid var(--brass);padding:12px 16px;color:#6E5320;max-width:66ch}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:40px}
+.shot{border:1px solid var(--plateEdge);border-radius:2px;overflow:hidden;background:#E3E0D8;margin:0}
+.shot .box{position:relative;aspect-ratio:4/3}
+.shot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.shot figcaption{font-size:.86rem;color:var(--inkSoft);padding:10px 13px;border-top:1px solid var(--plateEdge)}
+
+/* ── contact ── */
+.contact{padding:78px 0 90px}
+.contact h2{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 112;font-size:clamp(2rem,5.4vw,3.4rem);letter-spacing:-.028em;margin:0 0 12px;color:#F0EFEC}
+.contact p{color:var(--chromeSoft);max-width:48ch;margin:0 0 28px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.links a{text-decoration:none;border:1px solid rgba(255,255,255,.22);border-radius:2px;padding:12px 22px;font-size:.96rem;transition:background .16s,color .16s,border-color .16s}
+.links a:hover{background:var(--brass);color:var(--case);border-color:var(--brass)}
+footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0 44px;font-size:.86rem;color:var(--chromeSoft)}
+/* ── justified body text ── */
+.prose p,
+.summary,
+.entry p,
+.sheet-body p{
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+}
+@media (max-width:880px){
+  .prose p,.summary,.entry p,.sheet-body p{
+    text-align:left;
+    hyphens:manual;
+    -webkit-hyphens:manual;
+  }
+}
+/* ── lightbox: click a gallery photo to see it full size ── */
+.shot img{cursor:zoom-in}
+.lb{
+  position:fixed;inset:0;z-index:90;display:none;
+  align-items:center;justify-content:center;
+  background:rgba(4,7,11,.94);padding:60px 84px;
+}
+.lb.is-open{display:flex}
+.lb-fig{margin:0;max-width:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lb-fig img{
+  max-width:100%;max-height:calc(100vh - 160px);object-fit:contain;
+  border-radius:2px;box-shadow:0 24px 60px rgba(0,0,0,.6);
+}
+.lb-fig figcaption{color:var(--chrome);font-size:.92rem;text-align:center;max-width:70ch}
+.lb-x,.lb-nav{
+  position:absolute;background:rgba(255,255,255,.06);color:var(--chrome);
+  border:1px solid rgba(255,255,255,.22);border-radius:2px;cursor:pointer;font:inherit;
+  transition:background .16s,color .16s,border-color .16s;
+}
+.lb-x:hover,.lb-nav:hover{background:var(--brass);color:var(--case);border-color:var(--brass)}
+.lb-x{top:16px;right:20px;padding:8px 16px;font-size:.9rem}
+.lb-nav{top:50%;transform:translateY(-50%);width:48px;height:68px;font-size:2.2rem;line-height:1}
+.lb-prev{left:16px}
+.lb-next{right:16px}
+.lb.single .lb-nav{display:none}
+@media (max-width:880px){
+  .lb{padding:64px 10px 40px}
+  .lb-nav{top:auto;bottom:10px;transform:none;width:56px;height:44px;font-size:1.7rem}
+  .lb-prev{left:calc(50% - 64px)}
+  .lb-next{right:calc(50% - 64px)}
+}
+/* ── awards listed one per line ── */
+.badges{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.sheet-awards{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:28px}
+.sheet-awards .sheet-award{margin-bottom:0}
+/* ── one page-load reveal ── */
+.rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+.rise:nth-child(2){animation-delay:.09s}
+.rise:nth-child(3){animation-delay:.18s}
+.rise:nth-child(4){animation-delay:.27s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+@media (max-width:880px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  .bar nav{display:none}
+  .stage{perspective:none}
+  .tilt{transform:none!important}
+  .front{grid-template-columns:1fr}
+  .stage:nth-child(even) .item-photo{order:0}
+  .item-photo{min-height:220px;aspect-ratio:16/10}
+  .item-info{padding:28px 24px}
+  .item-info h3{font-size:1.65rem}
+  .base{padding:30px 26px}
+  .pack-body{grid-template-columns:1fr}
+  .carded .stage:nth-child(even) .blister{order:0}
+  .blister{margin:16px;min-height:210px}
+  .carded .item-info{padding:22px 22px 24px}
+  .header-card{padding:11px 18px}
+  .carded .stage{margin-bottom:58px}
+  .stamp div{grid-template-columns:1fr;gap:1px}
+  .cols{grid-template-columns:1fr;gap:36px}
+  .sheet-body,.sheet-top{padding-left:20px;padding-right:20px}
+  .specs div,.plate div{grid-template-columns:1fr;gap:2px}
+  .hero{padding:62px 0 54px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .tilt{transform:none!important}
+  .sheen{display:none}
+  .rise{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <div class="mark"><b id="initials"></b><span id="barRole"></span></div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="rise" id="heroName"></h1>
+      <p class="statement rise" id="heroStatement"></p>
+      <div class="rule rise"></div>
+      <div class="meta rise" id="heroMeta"></div>
+    </div>
+  </section>
+
+  <section class="band" id="work">
+    <h2>Selected work</h2>
+    <div id="items"></div>
+  </section>
+
+  <section class="band" id="about">
+    <h2>Background</h2>
+    <div class="cols">
+      <div class="prose" id="aboutProse"></div>
+      <div class="portrait" id="portraitSlot"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2>Education</h2>
+    <div id="eduList"></div>
+  </section>
+
+  <section class="band">
+    <h2>Experience</h2>
+    <div id="expList"></div>
+  </section>
+
+  <section class="band">
+    <h2>Skills</h2>
+    <div class="skillset" id="skillList"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let's talk.</h2>
+    <p>I'm looking for internships in medical device development and aerospace engineering.</p>
+    <div class="links" id="contactLinks"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-inner">
+    <div class="sheet-top">
+      <strong id="sheetTop"></strong>
+      <button class="close" id="closeBtn">Close</button>
+    </div>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const P=PORTFOLIO, T=THEME, root=document.documentElement;
+  Object.keys(T).forEach(k=>root.style.setProperty("--"+k,T[k]));
+
+  const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const todo=t=>/^\s*\[.*\]\s*$/.test(String(t||""));
+  const pad=n=>String(n).padStart(2,"0");
+  const awardList=a=>[].concat(a||[]).filter(Boolean);
+
+  function photo(src,alt,hint){
+    return src
+      ? `<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">`
+      : `<div class="slot"><b>Photo slot</b><span>${esc(hint)}</span></div>`;
+  }
+
+  document.getElementById("initials").textContent =
+    P.name.split(" ").map(w=>w[0]).join("");
+  document.getElementById("barRole").textContent = P.role||"";
+  document.getElementById("heroName").innerHTML =
+    P.name.split(" ").map(w=>`<span class="ln">${esc(w)}</span>`).join("");
+  document.getElementById("heroStatement").textContent = P.statement||"";
+  document.getElementById("heroMeta").innerHTML=[
+    P.location?esc(P.location):"",
+    P.email?`<a href="mailto:${esc(P.email)}">${esc(P.email)}</a>`:"",
+    P.linkedin?`<a href="${esc(P.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`:"",
+    P.resumeFile?`<a href="${esc(P.resumeFile)}">Resume</a>`:""
+  ].filter(Boolean).join("");
+
+  const carded = SETTINGS.style !== "plate";
+  const itemsEl = document.getElementById("items");
+  itemsEl.className = carded ? "carded" : "plate-mode";
+
+  itemsEl.innerHTML=P.projects.map((pr,i)=>{
+    const ref=pad(i+1)+" of "+pad(P.projects.length);
+    const copy=`
+      <div class="item-info">
+        ${carded?"":`<div class="ref">${ref}${pr.field?" — "+esc(pr.field):""}${pr.year?", "+esc(pr.year):""}</div>`}
+        <h3>${esc(pr.title)}</h3>
+        ${pr.tagline?`<p class="tagline">${esc(pr.tagline)}</p>`:""}
+        ${pr.summary?`<p class="summary">${esc(pr.summary)}</p>`:""}
+        ${awardList(pr.award).length?`<div class="badges">${awardList(pr.award).map(w=>`<span class="badge">${esc(w)}</span>`).join("")}</div>`:""}
+        <div class="acts">
+          <button class="btn openbtn" data-i="${i}">Open build sheet</button>
+          ${SETTINGS.flipHint?`<button class="btn ghost flipbtn">Turn over</button>`:""}
+        </div>
+        ${carded?`<div class="printed">
+            ${pr.field?`<span>${esc(pr.field)}</span>`:""}
+            ${pr.year?`<span>${esc(pr.year)}</span>`:""}
+
+          </div>`:""}
+      </div>`;
+
+    const photo_ = photo(pr.cover,pr.title,"images/"+pr.id+"-hero.jpg");
+
+    const front = carded
+      ? `<div class="face front">
+           <div class="pack">
+             <div class="hang"><i></i></div>
+             <div class="header-card">
+               <b>${esc(SETTINGS.seriesName||"")}</b>
+               <span>No. ${esc(ref)}</span>
+             </div>
+             <div class="pack-body">
+               <div class="blister"><div class="item-photo">${photo_}</div></div>
+               ${copy}
+             </div>
+           </div>
+           <div class="sheen"></div>
+         </div>`
+      : `<div class="face front">
+           <div class="item-photo">${photo_}</div>
+           ${copy}
+           <div class="sheen"></div>
+         </div>`;
+
+    return `
+    <article class="stage">
+      <div class="tilt" data-tilt>
+        <div class="flip">
+          ${front}
+          <div class="face back">
+            <div class="base engrave">
+              <i class="screw tl"></i><i class="screw tr"></i>
+              <i class="screw bl"></i><i class="screw br"></i>
+              <h4>${esc(pr.title)}</h4>
+              <p class="sub">${esc(pr.tagline||"")}</p>
+              ${pr.specs&&pr.specs.length?`<dl class="stamp">${pr.specs.map(sp=>
+                `<div><dt>${esc(sp.label)}</dt><dd>${esc(sp.value)}</dd></div>`).join("")}</dl>`:""}
+              <div class="base-foot">No. ${esc(ref)} — designed in Singapore${pr.year?", "+esc(pr.year):""}</div>
+              <div class="acts">
+                <button class="btn openbtn" data-i="${i}">Open build sheet</button>
+                <button class="btn ghost flipbtn">Turn back</button>
+              </div>
+            </div>
+            <div class="sheen"></div>
+          </div>
+        </div>
+      </div>
+    </article>`;}).join("");
+
+  if(carded && SETTINGS.seriesLine){
+    const l=document.createElement("p");
+    l.style.cssText="font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chromeSoft);margin:-16px 0 30px";
+    l.textContent=SETTINGS.seriesLine;
+    itemsEl.parentNode.insertBefore(l,itemsEl);
+  }
+
+  document.getElementById("aboutProse").innerHTML=(P.about||[]).map(p=>`<p>${esc(p)}</p>`).join("");
+  document.getElementById("portraitSlot").innerHTML=
+    photo(P.portrait,P.name,"images/portrait.jpg — ideally you at a bench or with a prototype");
+
+  document.getElementById("eduList").innerHTML=(P.education||[]).map(e=>`
+    <div class="entry">
+      <div class="entry-head"><h4>${esc(e.school)}</h4><span class="when">${esc(e.dates)}</span></div>
+      <p>${esc(e.award)}</p>
+      ${e.detail?`<p class="sub">${esc(e.detail)}</p>`:""}
+      ${e.notes&&e.notes.length?`<ul>${e.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}
+    </div>`).join("");
+
+  document.getElementById("expList").innerHTML=(P.experience||[]).map(e=>`
+    <div class="entry">
+      <div class="entry-head"><h4>${esc(e.role)}</h4><span class="when">${esc(e.dates)}</span></div>
+      <p class="sub">${esc(e.org)}</p>
+      ${e.note?`<p>${esc(e.note)}</p>`:""}
+    </div>`).join("");
+
+  document.getElementById("skillList").innerHTML=(P.skills||[]).map(s=>`
+    <div><h4>${esc(s.group)}</h4><ul>${s.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
+
+  document.getElementById("contactLinks").innerHTML=[
+    P.email?`<a href="mailto:${esc(P.email)}">${esc(P.email)}</a>`:"",
+    P.phone?`<a href="tel:${esc(String(P.phone).replace(/\s/g,""))}">${esc(P.phone)}</a>`:"",
+    P.linkedin?`<a href="${esc(P.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`:"",
+    P.resumeFile?`<a href="${esc(P.resumeFile)}">Download resume</a>`:""
+  ].filter(Boolean).join("");
+
+  document.getElementById("foot").textContent=P.name+", "+new Date().getFullYear();
+
+  const sheet=document.getElementById("sheet"),
+        body=document.getElementById("sheetBody"),
+        top=document.getElementById("sheetTop");
+  let last=null;
+
+  function open(i){
+    const pr=P.projects[i];
+    last=document.activeElement;
+    top.textContent=pr.title;
+    body.innerHTML=`
+      <h2 id="sheetTitle">${esc(pr.title)}</h2>
+      ${pr.tagline?`<p class="sheet-sub">${esc(pr.tagline)}</p>`:""}
+      ${awardList(pr.award).length?`<div class="sheet-awards">${awardList(pr.award).map(w=>`<div class="sheet-award">${esc(w)}</div>`).join("")}</div>`:""}
+      <div class="sheet-hero">${photo(pr.cover,pr.title,"images/"+pr.id+"-hero.jpg")}</div>
+      ${pr.specs&&pr.specs.length?`<dl class="specs">${pr.specs.map(s=>
+        `<div><dt>${esc(s.label)}</dt><dd${todo(s.value)?' style="color:#8A6A2E"':""}>${esc(s.value)}</dd></div>`
+      ).join("")}</dl>`:""}
+      ${(pr.sections||[]).map(s=>
+        `<h3>${esc(s.heading)}</h3>`+
+        (todo(s.body)?`<p class="todo">${esc(s.body)}</p>`:`<p>${esc(s.body)}</p>`)
+      ).join("")}
+      ${pr.gallery&&pr.gallery.length?`<div class="gallery">${pr.gallery.map((g,n)=>
+        `<figure class="shot"><div class="box">${photo(g.src,g.caption,"images/"+pr.id+"-"+(n+1)+".jpg")}</div>`+
+        (g.caption?`<figcaption>${esc(g.caption)}</figcaption>`:"")+`</figure>`
+      ).join("")}</div>`:""}`;
+    sheet.classList.add("is-open");
+    document.body.style.overflow="hidden";
+    sheet.scrollTop=0;
+    document.getElementById("closeBtn").focus();
+  }
+  function shut(){
+    sheet.classList.remove("is-open");
+    document.body.style.overflow="";
+    if(last) last.focus();
+  }
+  const items=document.getElementById("items");
+  items.addEventListener("click",e=>{
+    const o=e.target.closest(".openbtn");
+    if(o){ open(+o.dataset.i); return; }
+    const f=e.target.closest(".flipbtn");
+    if(f) f.closest(".flip").classList.toggle("turned");
+  });
+
+  // Tilt: the case leans toward the pointer, and a highlight tracks across it.
+  // Skipped for touch, for reduced-motion users, and if SETTINGS.tilt is false.
+  const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(SETTINGS.tilt && !still){
+    const MAX=6.5;
+    items.querySelectorAll("[data-tilt]").forEach(el=>{
+      let frame=null;
+      el.addEventListener("pointermove",e=>{
+        if(e.pointerType==="touch") return;
+        if(frame) return;
+        frame=requestAnimationFrame(()=>{
+          frame=null;
+          const r=el.getBoundingClientRect();
+          const x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+          el.classList.add("live");
+          el.style.setProperty("--ry",((x-.5)*MAX*2).toFixed(2)+"deg");
+          el.style.setProperty("--rx",((.5-y)*MAX*2).toFixed(2)+"deg");
+          el.style.setProperty("--mx",(x*100).toFixed(1)+"%");
+          el.style.setProperty("--my",(y*100).toFixed(1)+"%");
+          el.style.setProperty("--gloss",(18+x*64).toFixed(1)+"%");
+        });
+      });
+      el.addEventListener("pointerleave",()=>{
+        el.classList.remove("live");
+        el.style.setProperty("--rx","0deg");
+        el.style.setProperty("--ry","0deg");
+      });
+    });
+  }
+    // ── lightbox: click a gallery photo to see it full size ──
+  const lb=document.createElement("div");
+  lb.className="lb";
+  lb.setAttribute("role","dialog");
+  lb.setAttribute("aria-modal","true");
+  lb.setAttribute("aria-label","Photo viewer");
+  lb.innerHTML=
+    '<button class="lb-x" aria-label="Close photo">Close</button>'+
+    '<button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>'+
+    '<figure class="lb-fig"><img alt=""><figcaption></figcaption></figure>'+
+    '<button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>';
+  document.body.appendChild(lb);
+  const lbImg=lb.querySelector("img"), lbCap=lb.querySelector("figcaption");
+  let lbList=[], lbPos=0, lbLast=null;
+
+  function lbShow(n){
+    lbPos=(n+lbList.length)%lbList.length;
+    lbImg.src=lbList[lbPos].src;
+    lbImg.alt=lbList[lbPos].cap;
+    lbCap.textContent=(lbPos+1)+" / "+lbList.length+(lbList[lbPos].cap?"  —  "+lbList[lbPos].cap:"");
+  }
+  function lbOpen(img){
+    const shots=[...body.querySelectorAll(".shot img")];
+    lbList=shots.map(im=>({src:im.currentSrc||im.src,cap:im.alt}));
+    lbLast=document.activeElement;
+    lb.classList.toggle("single",lbList.length<2);
+    lb.classList.add("is-open");
+    lbShow(shots.indexOf(img));
+    lb.querySelector(".lb-x").focus();
+  }
+  function lbClose(){
+    lb.classList.remove("is-open");
+    lbImg.removeAttribute("src");
+    if(lbLast) lbLast.focus();
+  }
+
+  body.addEventListener("click",e=>{
+    const im=e.target.closest(".shot img");
+    if(im) lbOpen(im);
+  });
+  body.addEventListener("keydown",e=>{
+    if(e.key==="Enter" && e.target.matches(".shot img")){ e.preventDefault(); lbOpen(e.target); }
+  });
+  // lets keyboard users Tab to each photo
+  new MutationObserver(()=>{
+    body.querySelectorAll(".shot img").forEach(im=>{
+      im.tabIndex=0; im.setAttribute("role","button");
+    });
+  }).observe(body,{childList:true});
+
+  lb.querySelector(".lb-prev").addEventListener("click",()=>lbShow(lbPos-1));
+  lb.querySelector(".lb-next").addEventListener("click",()=>lbShow(lbPos+1));
+  lb.querySelector(".lb-x").addEventListener("click",lbClose);
+  lb.addEventListener("click",e=>{ if(e.target===lb) lbClose(); });
+
+  // runs before the build-sheet's own Escape handler, so Escape closes only the photo
+  document.addEventListener("keydown",e=>{
+    if(!lb.classList.contains("is-open")) return;
+    if(e.key==="Escape"){ e.stopPropagation(); lbClose(); }
+    else if(e.key==="ArrowLeft"){ lbShow(lbPos-1); }
+    else if(e.key==="ArrowRight"){ lbShow(lbPos+1); }
+  },true);
+  document.getElementById("closeBtn").addEventListener("click",shut);
+  sheet.addEventListener("click",e=>{ if(e.target===sheet) shut(); });
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape"&&sheet.classList.contains("is-open")) shut();
+  });
+})();
+</script>
+</body>
+</html>
